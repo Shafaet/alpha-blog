@@ -1,0 +1,20 @@
+
+
+<%
+    $i=0
+    $num=30
+	while $i < $num  do
+%>
+<%= link_to image_tag('Man.png'), '#' %>
+
+<% 
+$i=$i+1
+%>
+<% if $i%20==0 %>
+<br>  
+
+<% end %>
+
+<%
+end 
+%>
