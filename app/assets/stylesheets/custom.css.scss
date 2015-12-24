@@ -35,13 +35,20 @@ $navbar-default-bg: #280000;
 	letter-spacing: -1px;
 	font-weight: bold;
 }
-
+.description
+{
+	margin-top: 0px;
+}
 .btn-xlarge
 {
 	font-size: 1.5em;
 	background-color: black;
 }
-
+.article-actions
+{
+	border-top: 1px solid #eaeaea;
+	padding-top: 5px;
+}
 footer
 {
 	margin-top:45px;
