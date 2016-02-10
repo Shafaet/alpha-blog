@@ -45,6 +45,13 @@ class UsersController < ApplicationController
 	end
 
 	private
+
+	  def require_admin
+    	if logged_in? and !current_user.admin?
+      		flash[:danger]="Only admins can perform this action!"
+      		redirect_to root_path
+    	end
+  	end
 	def user_params
 		params.require(:user).permit(:username, :email, :password)
 	end
@@ -59,10 +66,5 @@ class UsersController < ApplicationController
 		end
 	end
 
-	def require_admin
-		if logged_in? and !current_user.admin?
-			flash[:danger]="Only admins can do that!"
-			redirect_to root_path
-		end
-	end
+
 end
